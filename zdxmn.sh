@@ -63,10 +63,10 @@ After=network.target
 [Service]
 User=root
 Type=forking
-PIDFile=$CONFIGFOLDER/$COIN_NAME.pid
+PIDFile=$(echo $HOME)/.ZDXCore/zdxd.pid
 WorkingDirectory=/usr/bin
-ExecStart=/usr/bin/zdxd -daemon -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER
-ExecStop=/usr/bin/zdx-cli -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER stop
+ExecStart=/usr/bin/zdxd -daemon -pid=$(echo $HOME)/.ZDXCore/zdxd.pid --datadir=$(echo $HOME)/.ZDXCore/
+ExecStop=/usr/bin/zdx-cli stop
 Restart=always
 TimeoutStopSec=60s
 TimeoutStartSec=10s
