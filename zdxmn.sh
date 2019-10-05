@@ -189,7 +189,7 @@ sudo chmod -R 755 zdx-cli zdxd
 cd ~
 sudo mkdir -p ~/.ZDXCore/
 sudo touch ~/.ZDXCore/zdx.conf
-cat << EOF > ~/.ZDXCore/zdx.conf
+sudo cat << EOF > ~/.ZDXCore/zdx.conf
 rpcuser=zdxuser
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 txindex=1
@@ -291,7 +291,7 @@ while [ -d /proc/$PID ]
 do
   printf "\b${sp:i++%${#sp}:1}"
 done
-cat << EOF > ~/.ZDXCore/zdx.conf
+sudo cat << EOF > ~/.ZDXCore/zdx.conf
 rpcuser=zdxuser
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 txindex=1
