@@ -2,7 +2,7 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='zdx.conf'
-CONFIGFOLDER='/root/.ZDXCore'
+CONFIGFOLDER='~/.ZDXCore'
 COIN_DAEMON='zdxd'
 COIN_CLI='zdx-cli'
 COIN_PATH='/usr/local/bin/'
@@ -244,7 +244,7 @@ function important_information() {
  echo -e "Please check ${RED}$COIN_NAME${NC} is running with the following command: ${RED}systemctl status $COIN_NAME.service${NC}"
  echo -e "Use ${RED}$COIN_CLI masternode status${NC} to check your MN."
  if [[ -n $SENTINEL_REPO  ]]; then
- echo -e "${RED}Sentinel${NC} is installed in ${RED}/root/sentinel_$COIN_NAME${NC}"
+ echo -e "${RED}Sentinel${NC} is installed in ${RED}~/sentinel_$COIN_NAME${NC}"
  echo -e "Sentinel logs is: ${RED}$CONFIGFOLDER/sentinel.log${NC}"
  fi
  }
