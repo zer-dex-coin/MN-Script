@@ -13,7 +13,7 @@ getnewaddress MN1
 ```
 masternode genkey
 ```
-2. start script in VPS console - run it as Root:
+2. start script in VPS console:
 ```
 sudo apt-get install curl -y && bash <(curl -s https://raw.githubusercontent.com/zer-dex-coin/MN-Script/master/zdxmn.sh) | tee ~/zdx_masternode_installation.log
 ```
