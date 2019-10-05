@@ -64,8 +64,9 @@ After=network.target
 User=root
 Type=forking
 PIDFile=$CONFIGFOLDER/$COIN_NAME.pid
-ExecStart=zdxd -daemon -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER
-ExecStop=-zdx-cli -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER stop
+WorkingDirectory=/usr/bin
+ExecStart=/usr/bin/zdxd -daemon -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER
+ExecStop=/usr/bin/zdx-cli -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER stop
 Restart=always
 TimeoutStopSec=60s
 TimeoutStartSec=10s
