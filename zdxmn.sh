@@ -58,23 +58,21 @@ function download_node() {
 function configure_systemd() {
   cat << EOF > /etc/systemd/system/$COIN_NAME.service
 [Unit]
-Description=$COIN_NAME service
+Description=$COIN_NAME daemon & service
 After=network.target
 [Service]
 User=root
-Group=root
 Type=forking
-#PIDFile=$CONFIGFOLDER/$COIN_NAME.pid
-ExecStart=$COIN_PATH$COIN_DAEMON -daemon -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER
-ExecStop=-$COIN_PATH$COIN_CLI -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER stop
+PIDFile=$CONFIGFOLDER/$COIN_NAME.pid
+ExecStart=zdxd -daemon -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER
+ExecStop=-zdx-cli -conf=$CONFIGFOLDER/$CONFIG_FILE -datadir=$CONFIGFOLDER stop
 Restart=always
-PrivateTmp=true
 TimeoutStopSec=60s
 TimeoutStartSec=10s
 StartLimitInterval=120s
 StartLimitBurst=5
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
 EOF
 
   systemctl daemon-reload
