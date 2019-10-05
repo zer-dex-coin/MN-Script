@@ -2,6 +2,7 @@
 
 
 Need a fresh VPS ubuntu with atleast 1 Gb RAM and 15 Gbs free space.
+
 1. prepare Windows wallet: 
 - go to debug console and type:
 ```
@@ -12,11 +13,11 @@ getnewaddress MN1
 ```
 masternode genkey
 ```
-2. start script in VPS console:
+2. start script in VPS console - run it as Root:
 ```
-sudo apt-get install curl -y && bash <(curl -s https://raw.githubusercontent.com/zer-dex-coin/MN-Script/master/zdxmn.sh) | tee ~/zdx_masternode_installation.log
+wget https://raw.githubusercontent.com/zer-dex-coin/MN-Script/master/script.sh && chmod +x script.sh && sudo ./script.sh
 ```
-3. wait to ask genkey and put by control+V the info getted in 4.3 point and give enter to go on.
+3. wait to ask genkey - paste genkey and give enter to go on.
 4. let finish and note the IP:PORT given at the end of the script execution
 5. back to your windows wallet and get masternode outputs:
 ```
