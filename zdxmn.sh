@@ -51,7 +51,8 @@ if [ -z "${wanip}" ]; then
     echo -e "${RED}Sorry, we don't know your external IPv4 addr${NC}" && echo ""
     echo -e "${GREEN}Input your IPv4 addr manually:${NC}" && read wanip
 fi
-echo "Your external IP is $wanip y/n?"
+echo "Your external IP is $wanip"
+echo "${GREEN}(y)es${NC}/${RED}(n)o"${NC}"
 read wan
             if [ "$wan" != "y" ]; then
                echo -e "${RED}Sorry, we don't know your external IPv4 addr${NC}" && exit 1
@@ -248,7 +249,7 @@ fi
 # Start zdx daemon, wait for wallet creation //
 sudo systemctl start zdxcore &&
 echo "" ; echo "Please wait for few minutes..."
-sleep 120 &
+sleep 12 &
 PID=$!
 i=1
 sp="/-\|"
