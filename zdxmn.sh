@@ -340,5 +340,5 @@ echo "Your external IPv4 addr: $wanip"
 echo "Installation log: ~/zdx_masternode_installation.log"
 echo "Zer-Dex Core datadir: "$(echo $HOME/.ZDXCore/)""
 echo ""
-echo -e "Need additional help? Please visit Zer-Dex Discord channel{NC}"
+echo -e "Need additional help? Please visit Zer-Dex Discord channel"{NC}
 echo ""
