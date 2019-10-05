@@ -1,4 +1,4 @@
-#Script to setup Masternode
+# Script to setup Masternode on Ubuntu 16.04 or 18.04 VPS
 
 
 Need a fresh VPS ubuntu with atleast 1 Gb RAM and 15 Gbs free space.
