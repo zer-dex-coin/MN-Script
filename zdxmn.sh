@@ -189,6 +189,7 @@ sudo chmod -R 755 zdx-cli zdxd
 cd ~
 sudo mkdir -p ~/.ZDXCore/
 sudo touch ~/.ZDXCore/zdx.conf
+sudo chmod -R 777 .ZDXCore
 sudo cat << EOF > ~/.ZDXCore/zdx.conf
 rpcuser=zdxuser
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
