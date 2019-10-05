@@ -52,7 +52,7 @@ if [ -z "${wanip}" ]; then
     echo -e "${GREEN}Input your IPv4 addr manually:${NC}" && read wanip
 fi
 echo "Your external IP is $wanip"
-echo "${GREEN}(y)es${NC}/${RED}(n)o"${NC}"
+echo -e "${GREEN}(y)es${NC}/${RED}(n)o"${NC}
 read wan
             if [ "$wan" != "y" ]; then
                echo -e "${RED}Sorry, we don't know your external IPv4 addr${NC}" && exit 1
