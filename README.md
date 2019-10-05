@@ -32,7 +32,9 @@ outputidx: 1
 MN1 IP:PORT masternodekey masternodeouputs txnumber
 EXAMPLE: 38.25.122.251:19849 7NEGGttKZojkAzViEYXXXxKTFdAtC2uSiMg8NSFqYVBtN6mYdU 7a1ebb4baadf9ff39bbbfc2d58fd57ff15b65a5096069c8XXX3fb4cb5c 1
 ```
-6. save masternode conf file, reopen wallet and in masternode section type select created masternode and click START (MN transaction needs at least 15 blocks to be confirmed and start to work)
+6. save masternode conf file, reopen wallet and in masternode section type select created masternode and click START (MN transaction needs at least 15 blocks to be confirmed and start to work).
+
+
 
 
 Some commands to operate Masternode on VPS:
