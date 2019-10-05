@@ -282,7 +282,7 @@ fi
 echo ""
 echo "Give some time to shutdown the wallet..."
 echo ""
-sleep 60 &
+sleep 15 &
 PID=$!
 i=1
 sp="/-\|"
