@@ -78,7 +78,7 @@ read wan
 					sudo cp -fr ZDXCore/zdx-cli ZDXCore/zdxd /usr/bin/ &&
 					sudo rm -fr ZDXCore zdx-cli zdxd zdx-tx zdx-qt ZDXCore.ubuntu18.04.zip &&
 					cd /usr/bin &&
-					sudo chmod -R 755 zdx-cli zdxd &&
+					chmod -R 755 zdx-cli zdxd &&
 					cd ~ &&
 					echo -e "${GREEN}4/5 Zer-Dex wallet is updated${NC}" &&
 					sudo systemctl start zdxcore &&
@@ -116,7 +116,7 @@ read wan
 					sudo cp -fr ZDXCore/zdx-cli ZDXCore/zdxd /usr/bin/ &&
 					sudo rm -fr ZDXCore zdx-cli zdxd zdx-tx zdx-qt ZDXCore.ubuntu16.04.zip &&
 					cd /usr/bin &&
-					sudo chmod -R 755 zdx-cli zdxd &&
+					chmod -R 755 zdx-cli zdxd &&
 					cd ~ &&
 					echo -e "${GREEN}4/5 Zer-Dex wallet is updated${NC}" &&
 					sudo systemctl start zdxcore &&
@@ -185,12 +185,11 @@ echo ""
 sudo cp -fr ZDXCore/zdx-cli ZDXCore/zdxd /usr/bin/
 sudo rm -fr ZDXCore zdx-cli zdxd zdx-tx zdx-qt ZDXCore.ubuntu18.04.zip ZDXCore.ubuntu16.04.zip
 cd /usr/bin
-sudo chmod -R 755 zdx-cli zdxd
+chmod -R 755 zdx-cli zdxd
 cd ~
-sudo mkdir -p ~/.ZDXCore/
-sudo touch ~/.ZDXCore/zdx.conf
-sudo chmod -R 777 .ZDXCore
-sudo cat << EOF > ~/.ZDXCore/zdx.conf
+mkdir -p ~/.ZDXCore/
+touch ~/.ZDXCore/zdx.conf
+cat << EOF > ~/.ZDXCore/zdx.conf
 rpcuser=zdxuser
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 txindex=1
@@ -292,7 +291,7 @@ while [ -d /proc/$PID ]
 do
   printf "\b${sp:i++%${#sp}:1}"
 done
-sudo cat << EOF > ~/.ZDXCore/zdx.conf
+cat << EOF > ~/.ZDXCore/zdx.conf
 rpcuser=zdxuser
 rpcpassword=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo '')
 txindex=1
