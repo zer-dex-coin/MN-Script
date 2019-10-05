@@ -47,3 +47,5 @@ Some commands to operate Masternode on VPS:
 
 ```zdxd``` - Start node.
 
+```ufw disable``` - disable firewall, use it if you run other masternodes on same VPS
+
