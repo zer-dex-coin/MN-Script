@@ -22,7 +22,7 @@ sudo apt-get install curl -y && bash <(curl -s https://raw.githubusercontent.com
 ```
 masternode outputs
 ```
-will give you something like this: you will only need anote what are between "" 
+will give you something like this: you will only need a note what are between "" 
 ```
 txhash: "7a1ebb4baadf9ff39bbbfc2d58fd57ff15b65a5096069c8b232d3d312fb4xxxx",
 outputidx: 1
