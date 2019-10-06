@@ -8,7 +8,7 @@ Need a fresh VPS ubuntu with atleast 1 Gb RAM and 15 Gbs free space.
 ```
 getnewaddress MN1
 ```
-- send 10.000 ZDX to this address and let at least confirm by 1 blocks
+- send 10,000 ZDX to this address and let at least confirm by 1 blocks
 - get the MN key and save in txt:
 ```
 masternode genkey
