@@ -323,9 +323,9 @@ sudo rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Zer-Dex blockchain ${NC}"
 echo ""
-wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.1.0.0/bootstrap.265k.blocks.zip
-unzip -o bootstrap.265k.blocks.zip
-sudo rm -f  bootstrap.265k.blocks.zip
+wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.1.0.0/bootstrap.zip
+unzip -o bootstrap.zip
+sudo rm -f  bootstrap.zip
 
 # Final start
 echo ""
