@@ -72,7 +72,7 @@ read wan
 					cd ~ &&
 					sudo rm -fr zdx-cli zdxd zdx-tx ZDXCore ZDXCore.ubuntu18.04.zip &&
 					echo -e "${GREEN}2/5 Old Zer-Dex wallet is deleted${NC}" &&
-					wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.2.0.0/ZDXCore.ubuntu18.04.zip &&
+					wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.3.0.0/ZDXCore.ubuntu18.04.zip &&
 					echo -e "${GREEN}3/5 Zer-Dex wallet is downloaded${NC}" &&
 					unzip -o ZDXCore*.zip &&
 					sudo cp -fr ZDXCore/zdx-cli ZDXCore/zdxd /usr/bin/ &&
@@ -110,7 +110,7 @@ read wan
 					cd ~ &&
 					sudo rm -fr ZDXCore zdx-cli zdxd zdx-tx ZDXCore.ubuntu16.04.zip &&
 					echo -e "${GREEN}2/5 Old Zer-Dex wallet is deleted${NC}" &&
-					wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.2.0.0/ZDXCore.ubuntu16.04.zip &&
+					wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.3.0.0/ZDXCore.ubuntu16.04.zip &&
 					echo -e "${GREEN}3/5 Zer-Dex wallet is downloaded${NC}" &&
 					unzip -o ZDXCore*.zip &&
 					sudo cp -fr ZDXCore/zdx-cli ZDXCore/zdxd /usr/bin/ &&
@@ -173,10 +173,10 @@ sudo rm -fr ZDXCore*.zip
 sudo rm -R -fr ZDXCore.ubuntu18.04
 
             if [ "$OS_version" -eq "1" ]; then
-                wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.2.0.0/ZDXCore.ubuntu18.04.zip
+                wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.3.0.0/ZDXCore.ubuntu18.04.zip
 		if [ $? -ne "0" ]; then echo "Failed to download zdxd binary" && exit 1; fi
             elif [ "$OS_version2" -eq "1" ]; then
-                wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.2.0.0/ZDXCore.ubuntu16.04.zip
+                wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.3.0.0/ZDXCore.ubuntu16.04.zip
 		if [ $? -ne "0" ]; then echo "Failed to download zdxd binary" && exit 1; fi
             fi
 # Manage coin daemon and configuration //
@@ -323,7 +323,7 @@ sudo rm -R blocks chainstate
 echo ""
 echo -e "${GREEN}5/6 please wait, installation script downloads Zer-Dex blockchain ${NC}"
 echo ""
-wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.2.0.0/bootstrap.zip
+wget https://github.com/zer-dex-coin/zerdex-core/releases/download/1.3.0.0/bootstrap.zip
 unzip -o bootstrap.zip
 sudo rm -f  bootstrap.zip
 
