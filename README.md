@@ -8,7 +8,7 @@ Need a fresh VPS ubuntu with atleast 1 Gb RAM and 15 Gbs free space.
 ```
 getnewaddress MN1
 ```
-- send 10,000 ZDX to this address and let at least confirm by 1 blocks
+- send 25,000 ZDX to this address and let at least confirm by 1 blocks
 - get the MN key and save in txt:
 ```
 masternode genkey
@@ -32,7 +32,7 @@ outputidx: 1
 MN1 IP:PORT masternodekey masternodeouputs txnumber
 EXAMPLE: 38.25.122.251:19849 7NEGGttKZojkAzViEYXXXxKTFdAtC2uSiMg8NSFqYVBtN6mYdU 7a1ebb4baadf9ff39bbbfc2d58fd57ff15b65a5096069c8XXX3fb4cb5c 1
 ```
-6. save masternode conf file, reopen wallet and in masternode section type select created masternode and click START (MN transaction needs at least 15 blocks to be confirmed and start to work).
+6. save masternode conf file, reopen wallet and in masternode section type select created masternode and click START (MN transaction needs at least 16 blocks to be confirmed and start to work).
 
 
 
